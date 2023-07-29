@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Platinumz Bets</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href=".css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link
+      href="http://fonts.googleapis.com/css?family=Open+Sans:400,700"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script type="text/javascript">
+      var thumbnail_mode = "float";
+      summary_noimg = 100;
+      summary_img = 100;
+
+      function removeHtmlTag(strx, chop) {
+        if (strx.indexOf("<") != -1) {
+          var s = strx.split("<");
+          for (var i = 0; i < s.length; i++) {
+            if (s[i].indexOf(">") != -1) {
+              s[i] = s[i].substring(s[i].indexOf(">") + 1, s[i].length);
+            }
+          }
+          strx = s.join("");
+        }
+        chop = chop < strx.length - 1 ? chop : strx.length - 2;
+        while (strx.charAt(chop - 1) != " " && strx.indexOf(" ", chop) != -1)
+          chop++;
+        strx = strx.substring(0, chop - 1);
+        return strx + "...";
+      }
+
+      function createSummaryAndThumb(pID) {
+        var div = document.getElementById(pID);
+        var imgtag = "";
+        var img = div.getElementsByTagName("img");
+        var summ = summary_noimg;
+        if (img.length >= 1) {
+          imgtag =
+            '<div class="crop"><img src="' +
+            img[0].src +
+            '" max-width="535;" /></div>';
+          summ = summary_img;
+        }
+        var summary =
+          imgtag +
+          '<div class="posting">' +
+          removeHtmlTag(div.innerHTML, summ) +
+          "</div>";
+        div.innerHTML = summary;
+      }
+    </script>
+  </head>
+  <body class="home blog">
+    <div class="jorib">
+      <a href="#"><div class="googlejo"></div></a>
+      <a href="#"><div class="twitterjo"></div></a>
+      <a href="#"><div class="facebookjo"></div></a>
+      <a href="#"><div class="pinterestjo"></div></a>
+    </div>
+
+    <div id="header">
+      <div class="header-wrap">
+        <section
+          class="blognames"
+          id="blognames"
+          maxwidgets="1"
+          showaddelement="no"
+        >
+          <div
+            id="Header1"
+            locked="true"
+            title="Shiroi (Header)"
+            type="Header"
+            version="1"
+            visible="true"
+          >
+            <div id="main">
+              <div id="header-inner">
+                <div class="titlewrapper" style="background: transparent">
+                  <h1
+                    class="title"
+                    style="background: transparent; border-width: 0px"
+                  >
+                    <span>Blog Title</span>
+                  </h1>
+                </div>
+                <div class="description">Blog Description</div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- Pages-based menu added by BTemplates.com -->
+    <div id="menujohanes">
+      <div>
+        <!-- Pages -->
+        <section id="pagesmenuwidget" maxwidgets="1" showaddelement="no">
+          <div
+            id="PageList9"
+            locked="false"
+            title="Pages - Menu"
+            type="PageList"
+            version="1"
+            visible="true"
+          >
+            <div id="main">
+              <div>
+                <ul>
+                  <li class="selected"><a href="#">Page 1</a></li>
+                  <li><a href="#">Page 2</a></li>
+                  <li><a href="#">Page 3</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- /Pages -->
+      </div>
+    </div>
+
+    <div id="wrapper">
+      <div id="featured">
+        <ul class="ui-tabs-nav">
+          <li class="ui-tabs-nav-item ui-tabs-selected" id="nav-fragment-1">
+            <a href="#fragment-1">
+              <img
+                alt=""
+                src="https://2.bp.blogspot.com/-qAKU7tpxOwU/Vwy_scABz-I/AAAAAAAAAtk/-AOv-CUzWBM/s000/kurumi-tokisaki-icon.jpg"
+              />
+              <span>Kurumi Tokisaki</span>
+            </a>
+          </li>
+          <li class="ui-tabs-nav-item" id="nav-fragment-2">
+            <a href="#fragment-2">
+              <img
+                alt=""
+                src="https://2.bp.blogspot.com/-GTDfkjEiAzo/Vwy_sp8tFNI/AAAAAAAAAto/5QSuDIjAQuA/s000/date-a-live-icon.jpg"
+              />
+              <span>Date A Live</span>
+            </a>
+          </li>
+          <li class="ui-tabs-nav-item" id="nav-fragment-3">
+            <a href="#fragment-3">
+              <img
+                alt=""
+                src="https://1.bp.blogspot.com/-eDOr2RFGllU/Vwy_slafBmI/AAAAAAAAAts/Ml7n1ompCz0/s000/miku-icon.jpg"
+              />
+              <span>Hatsune Miku</span>
+            </a>
+          </li>
+          <li class="ui-tabs-nav-item" id="nav-fragment-4">
+            <a href="#fragment-4">
+              <img
+                alt=""
+                src="https://4.bp.blogspot.com/-tG_v7tnHzTs/Vwy_s41IU3I/AAAAAAAAAtw/mryx2VMqZV0/s000/hentai-ouji-icon.jpg"
+              />
+              <span>Hentai Ouji</span>
+            </a>
+          </li>
+        </ul>
+
+        <div class="ui-tabs-panel" id="fragment-1" style="">
+          <img
+            alt=""
+            src="https://1.bp.blogspot.com/-Xnm4CJXmri8/Vwy_tJyXdOI/AAAAAAAAAt0/WIquUcEl__M/s000/slide1.jpg"
+          />
+          <div class="info">
+            <h2><a href="#">Kurumi Tokisaki</a></h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+              tincidunt condimentum lacus. Pellentesque ut diam.
+            </p>
+          </div>
+        </div>
+
+        <div class="ui-tabs-panel ui-tabs-hide" id="fragment-2" style="">
+          <img
+            alt=""
+            src="https://2.bp.blogspot.com/-IgXHqE48Zo8/Vwy_tbSU8xI/AAAAAAAAAt4/BmFz2KHzgMw/s000/slide2.jpg"
+          />
+          <div class="info">
+            <h2><a href="#">Date A Live</a></h2>
+            <p>
+              Vestibulum leo quam, accumsan nec porttitor a, euismod ac tortor.
+              Sed ipsum lorem, sagittis non egestas id, suscipit.
+            </p>
+          </div>
+        </div>
+
+        <div class="ui-tabs-panel ui-tabs-hide" id="fragment-3" style="">
+          <img
+            alt=""
+            src="https://3.bp.blogspot.com/-mFSp2x2rNuY/Vwy_twPmj9I/AAAAAAAAAt8/WMixGjz7TEQ/s000/slide3.jpg"
+          />
+          <div class="info">
+            <h2><a href="#">Hatsune Miku</a></h2>
+            <p>
+              liquam erat volutpat. Proin id volutpat nisi. Nulla facilisi.
+              Curabitur facilisis sollicitudin ornare.
+            </p>
+          </div>
+        </div>
+
+        <div class="ui-tabs-panel ui-tabs-hide" id="fragment-4" style="">
+          <img
+            alt=""
+            src="https://3.bp.blogspot.com/-tP_oAR2jwMk/Vwy_uO277hI/AAAAAAAAAuA/UbeDLbhAMjg/s000/slide4.jpg"
+          />
+          <div class="info">
+            <h2><a href="#">Hentai Ouji</a></h2>
+            <p>
+              Quisque sed orci ut lacus viverra interdum ornare sed est. Donec
+              porta, erat eu pretium luctus, leo augue sodales.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="clear"></div>
+
+      <div id="casing">
+        <section
+          class="main"
+          id="main"
+          data-maxwidgets="2"
+          data-showaddelement="yes"
+        >
+          <div
+            id="Blog1"
+            class="widget"
+            data-locked="true"
+            data-title="Blog Posts"
+            data-type="Blog"
+            data-version="1"
+            data-visible="true"
+          >
+            <!-- posts -->
+            <div class="blog-posts hfeed">
+              <!-- Include status message -->
+              <!-- Replace b:include with appropriate HTML content -->
+              <div class="status-message">
+                <!-- Status message content goes here -->
+              </div>
+
+              <!-- Default Ad Start -->
+              <!-- Replace data:defaultAdStart with appropriate HTML content -->
+              <div class="default-ad-start">
+                <!-- Default Ad Start content goes here -->
+              </div>
+
+              <!-- Loop through blog posts -->
+              <!-- Replace b:loop with appropriate HTML and logic -->
+              <!-- Assuming data:posts is an array of blog posts -->
+              <!-- Replace data:post properties with appropriate HTML attributes -->
+              <!-- Replace b:if conditions with appropriate JS logic -->
+              <!-- Replace b:include with appropriate HTML content -->
+              <!-- Replace data variables with actual data from the post object -->
+              <!-- Repeat this block for each blog post -->
+              <div class="post-outer">
+                <!-- Post content goes here -->
+              </div>
+
+              <!-- Include comments or threaded comments -->
+              <!-- Replace b:if conditions with appropriate JS logic -->
+              <!-- Replace b:include with appropriate HTML content -->
+              <!-- Repeat this block for static pages and item pages -->
+              <div class="comments">
+                <!-- Comments content goes here -->
+              </div>
+
+              <!-- Include ad code -->
+              <!-- Replace b:if conditions with appropriate JS logic -->
+              <!-- Replace b:include with appropriate HTML content -->
+              <!-- Replace data variables with actual ad code -->
+              <div class="inline-ad">
+                <!-- Ad code goes here -->
+              </div>
+
+              <!-- Include post latency JS -->
+              <!-- Replace b:if conditions with appropriate JS logic -->
+              <!-- Replace data:post.latencyJs with actual JS code -->
+              <script>
+                // Post latency JS code
+              </script>
+            </div>
+
+            <!-- Clear floated elements -->
+            <div class="clear"></div>
+
+            <!-- Include next/previous navigation -->
+            <!-- Replace b:include with appropriate HTML content -->
+            <div class="nextprev">
+              <!-- Next/Previous navigation content goes here -->
+            </div>
+
+            <!-- Include Google annotations -->
+            <!-- Replace b:if conditions with appropriate JS logic -->
+            <!-- Replace data:top.languageCode and data:top.blogspotReviews with actual values -->
+            <script
+              src="//www.google.com/jsapi"
+              type="text/javascript"
+            ></script>
+            <script type="text/javascript">
+              google.load("annotations", "1", {"locale": "<data:top.languageCode>"});
+              function initialize() {
+                google.annotations.setApplicationId(<data:top.blogspotReviews>);
+                google.annotations.createAll();
+                google.annotations.fetch();
+              }
+              google.setOnLoadCallback(initialize);
+            </script>
+          </div>
+          <!-- backlinkDeleteIcon -->
+          <span class="item-control">
+            <a href="[backlink.deleteUrl]" title="[top.deleteBacklinkMsg]">
+              <img src="//www.blogger.com/img/icon_delete13.gif" />
+            </a>
+          </span>
+          <!-- backlinks -->
+          <div id="links">
+            <h4>[post.backlinksLabel]</h4>
+            <div id="comments-block">
+              <!-- Begin backlink loop -->
+              [backlink loop]
+              <div class="collapsed-backlink backlink-control">
+                <div class="comment-title">
+                  <span class="backlink-toggle-zippy">&#160;</span>
+                  <a href="[backlink.url]" rel="nofollow">[backlink.title]</a>
+                  <!-- Include backlinkDeleteIcon -->
+                  <span class="item-control">
+                    <a
+                      href="[backlink.deleteUrl]"
+                      title="[top.deleteBacklinkMsg]"
+                    >
+                      <img src="//www.blogger.com/img/icon_delete13.gif" />
+                    </a>
+                  </span>
+                </div>
+                <div class="comment-body collapseable">[backlink.snippet]</div>
+                <div class="comment-footer collapseable">
+                  <span class="comment-author"
+                    >[post.authorLabel] [backlink.author]</span
+                  >
+                  <span class="comment-timestamp"
+                    >[post.timestampLabel] [backlink.timestamp]</span
+                  >
+                </div>
+              </div>
+              <!-- End backlink loop -->
+            </div>
+            <p class="comment-footer">
+              <a
+                class="comment-link"
+                href="[post.createLinkUrl]"
+                id="[widget.instanceId]_backlinks-create-link"
+                target="_blank"
+                >[post.createLinkLabel]</a
+              >
+            </p>
+          </div>
+          <!-- comment-form -->
+          <div id="comment-form">
+            <div id="respond">
+              <a name="comment-form" />
+              <h3>Leave a Reply</h3>
+              <p>[blogCommentMessage]</p>
+              [blogTeamBlogMessage]
+              <a href="[post.commentFormIframeSrc]" id="comment-editor-src" />
+              <iframe
+                allowtransparency="true"
+                class="blogger-iframe-colorize blogger-comment-from-post"
+                frameborder="0"
+                height="410"
+                id="comment-editor"
+                name="comment-editor"
+                src=""
+                width="100%"
+              ></iframe>
+              [post.friendConnectJs] [post.cmtfpIframe]
+              <script type="text/javascript">
+                BLOG_CMT_createIframe(
+                  "[post.appRpcRelayPath]",
+                  "[post.communityId]"
+                );
+              </script>
+              <a href='[blog.homepageUrl + "feeds/posts/default"]'
+                >Subscribe to Posts</a
+              >
+              |
+              <a href='[blog.homepageUrl + "feeds/comments/default"]'
+                >Subscribe to Comments</a
+              >
+            </div>
+          </div>
+          <!-- commentDeleteIcon -->
+          <span class="item-control">
+            <a href="[comment.deleteUrl]" title="[top.deleteCommentMsg]">
+              <img src="//www.blogger.com/img/icon_delete13.gif" />
+            </a>
+          </span>
+          <!-- comment_count_picker -->
+          <span
+            class="cmt_count_iframe_holder"
+            data-count="[post.numComments]"
+            data-onclick="[post.addCommentOnclick]"
+            data-url="[post.canonicalUrl]"
+          ></span>
+          <!-- comment_picker -->
+          [post.forceIframeComments] [post] [iframe_comments]
+          [post.showThreadedComments] [threaded_comments] [else] [comments]
+          [/post] [else] [post.commentSource == 1] [post] [iframe_comments]
+          [/post] [else] [post.showThreadedComments] [threaded_comments] [else]
+          [comments] [/post] [/post.commentSource] [/post.forceIframeComments]
+          <!-- comments -->
+          <div class="clear"></div>
+          <div id="commentsbox">
+            <a name="comments" />
+            [post.allowComments] [post.numComments != 0]
+            <h3 id="comments">
+              [post.numComments == 1] One Response so far. [else]
+              [post.numComments] Responses so far. [/post.numComments]
+            </h3>
+            [/post.numComments] [post.commentPagingRequired]
+            <span class="paging-control-container">
+              <a class="[post.oldLinkClass]" href="[post.oldestLinkUrl]"
+                >[post.oldestLinkText]</a
+              >
+              &#160;
+              <a class="[post.oldLinkClass]" href="[post.olderLinkUrl]"
+                >[post.olderLinkText]</a
+              >
+              &#160; [post.commentRangeText] &#160;
+              <a class="[post.newLinkClass]" href="[post.newerLinkUrl]"
+                >[post.newerLinkText]</a
+              >
+              &#160;
+              <a class="[post.newLinkClass]" href="[post.newestLinkUrl]"
+                >[post.newestLinkText]</a
+              >
+            </span>
+            [/post.commentPagingRequired]
+            <ol class="commentlist">
+              <!-- Begin comment loop -->
+              [comment loop] [comment.adminClass == post.adminClass]
+              <li class="comment odd">
+                <div class="comment-body">
+                  <div class="comment-author vcard">
+                    [comment.favicon]
+                    <img
+                      src="[comment.favicon]"
+                      height="32px"
+                      style="margin-bottom: -2px"
+                      width="32px"
+                    />
+                    [/comment.favicon]
+                    <a name="[comment.anchorName]" />
+                    [blog.enabledCommentProfileImages]
+                    [comment.authorAvatarImage]
+                    [/blog.enabledCommentProfileImages]
+                    <cite class="fn">
+                      [comment.authorUrl]
+                      <a href="[comment.authorUrl]" rel="nofollow"
+                        >[comment.author]</a
+                      >
+                      [else] [comment.author] [/comment.authorUrl]
+                    </cite>
+                    <span class="says">says:</span>
+                  </div>
+                  <div class="comment-meta commentmetadata">
+                    <a href="[comment.url]" title="comment permalink">
+                      [comment.timestamp]
+                    </a>
+                    <!-- Include commentDeleteIcon -->
+                    <span class="item-control">
+                      <a
+                        href="[comment.deleteUrl]"
+                        title="[top.deleteCommentMsg]"
+                      >
+                        <img src="//www.blogger.com/img/icon_delete13.gif" />
+                      </a>
+                    </span>
+                  </div>
+                  [comment.isDeleted]
+                  <span class="deleted-comment">[comment.body]</span>
+                  [else]
+                  <p>
+                    [comment.body]
+                    <span class="interaction-iframe-guide" />
+                  </p>
+                  [/comment.isDeleted]
+                </div>
+              </li>
+              [else]
+              <li class="comment even">
+                <div class="comment-body">
+                  <div class="comment-author vcard">
+                    [comment.favicon]
+                    <img
+                      src="[comment.favicon]"
+                      height="32px"
+                      style="margin-bottom: -2px"
+                      width="32px"
+                    />
+                    [/comment.favicon]
+                    <a name="[comment.anchorName]" />
+                    [blog.enabledCommentProfileImages]
+                    [comment.authorAvatarImage]
+                    [/blog.enabledCommentProfileImages]
+                    <cite class="fn">
+                      [comment.authorUrl]
+                      <a href="[comment.authorUrl]" rel="nofollow"
+                        >[comment.author]</a
+                      >
+                      [else] [comment.author] [/comment.authorUrl]
+                    </cite>
+                    <span class="says">says:</span>
+                  </div>
+                  <div class="comment-meta commentmetadata">
+                    <a href="[comment.url]" title="comment permalink">
+                      [comment.timestamp]
+                    </a>
+                    <!-- Include commentDeleteIcon -->
+                    <span class="item-control">
+                      <a
+                        href="[comment.deleteUrl]"
+                        title="[top.deleteCommentMsg]"
+                      >
+                        <img src="//www.blogger.com/img/icon_delete13.gif" />
+                      </a>
+                    </span>
+                  </div>
+                  [comment.isDeleted]
+                  <span class="deleted-comment">[comment.body]</span>
+                  [else]
+                  <p>
+                    [comment.body]
+                    <span class="interaction-iframe-guide" />
+                  </p>
+                  [/comment.isDeleted]
+                </div>
+              </li>
+              [/comment.adminClass] [/comment loop]
+              <!-- End comment loop -->
+            </ol>
+            [/post.numComments] [/post.allowComments]
+          </div>
+          <!-- /comments -->
+        </section>
+      </div>
+    </div>
+  </body>
+</html>
